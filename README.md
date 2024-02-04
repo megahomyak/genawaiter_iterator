@@ -1,3 +1,1 @@
-This crate is intended for easy creation of iterators without exposing that they're actually Genawaiter generators. Generators have more overhead than iterators (in this implementation), but it's much easier to write them so it's worth the overhead, I think.
-
-Use `genawaiter_iterator::genawaiter_iterator!(struct IterStructName yields OutputType)` to create the iterator struct, then use `genawaiter_iterator::gen!({genawaiter::yield_!(OutputType { ... });})` to create a generator and automatically coerce it to the output type (implied that you invoke `gen!` in an `iter(&self) -> IterStructName` method (might have another receiver type)).
+See [the documentation](https://docs.rs/crate/genawaiter_iterator) for further explanations, or just check the sources, they're small enough.
